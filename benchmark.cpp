@@ -38,12 +38,18 @@ int main(int argc, char** argv)
       setup(n, &A[0]);
 
       // insert your timer code here
+      // from instrumentation code in example chrono_timer provided that starts timing
+      std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
 
       // invoke method to perform the sum
       t = sum(n, &A[0]);
 
       // insert your end timer code here, and print out elapsed time for this problem size
+      // from instrumentation code in example chrono_timer provided that ends the time
+      std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
+      std::chrono::duration<double> elapsed = end - start; // computation for elapsed time 
 
+      printf(" Elapsed time is = %f seconds\n", elapsed.count());
       printf(" Sum result = %lf \n",t);
 
    } // end loop over problem sizes

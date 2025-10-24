@@ -12,6 +12,10 @@ void
 setup(int64_t N, int64_t A[])
 {
    printf(" inside sum_indirect problem_setup, N=%lld \n", N);
+   
+   for (int64_t i = 0; i < N; i++) {
+      A[i] = lrand48() % N; // initialize the array of length N to random numbers
+   }
 }
 
 int64_t
