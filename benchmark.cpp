@@ -49,7 +49,7 @@ int main(int argc, char** argv)
       std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
       std::chrono::duration<double> elapsed = end - start; // computation for elapsed time 
 
-      printf(" Elapsed time is = %f seconds\n", elapsed.count());
+      //printf(" Elapsed time is = %f seconds\n", elapsed.count());
       printf(" Sum result = %lf \n",t);
 
    } // end loop over problem sizes
